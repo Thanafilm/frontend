@@ -15,6 +15,7 @@ import managesale from "./component/pages/mangeproduct/managesale";
 import mangeauction from "./component/pages/mangeproduct/manageauction";
 import mangeproduct from "./component/pages/mangeproduct/manageproduct";
 import manageaccs from "./component/pages/mangeproduct/manageaccess";
+import offerbuy from "./component/pages/offerofbuy/offerbuy";
 
 // Router to path componente
 class App extends Component{
@@ -36,6 +37,7 @@ class App extends Component{
         <Route path = "/manage/auction" component = {mangeauction}/>
         <Route path = "/manage/product" component = {mangeproduct}/>
         <Route path = "/mange/accessories" component = {manageaccs}/>
+        <Route path = "/offer/offerbuy" component = {offerbuy}/>
 
 
       </Switch>

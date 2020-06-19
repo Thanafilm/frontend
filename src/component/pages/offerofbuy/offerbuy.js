@@ -4,16 +4,33 @@ import "../../../component/styleWebpage.css";
 import HeaderLogin from "../../../HeaderLogin.js";
 import Navbar from "../../../Navbar";
 import Footer from '../../../Footer';
-import { AccessAlarm, ThreeDRotation } from '@material-ui/icons';
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
 import SaveIcon from "@material-ui/icons/Save";
 import { makeStyles } from "@material-ui/core/styles";
 import './styleAbor.css';
-import MenuItem from "@material-ui/core/MenuItem";
-import FormControl from "@material-ui/core/FormControl";
-import InputLabel from "@material-ui/core/InputLabel";
-import Select from "@material-ui/core/Select";
+import IconButton from '@material-ui/core/IconButton';
+import SearchIcon from '@material-ui/icons/Search';
+import TableRow from '@material-ui/core/TableRow';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import Table from '@material-ui/core/Table';
+import TableHead from '@material-ui/core/TableHead';
+import AssignmentIcon from '@material-ui/icons/Assignment';
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+import FormLabel from 'react-bootstrap';
+import Form from 'react-bootstrap';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import {
+  MuiPickersUtilsProvider,
+  KeyboardTimePicker,
+  KeyboardDatePicker,
+} from '@material-ui/pickers';
+
 
 
 
@@ -25,20 +42,54 @@ class accessories extends React.Component{
                 <HeaderLogin/>
                 <Navbar/>
                      <div className='row ' style={{backgroundColor:"#ffffff",marginTop:"20px", marginLeft:"10%",marginRight:"10%"}}><button type="button" class="btn btn-success"><h5>เสนอซื้อสินค้า</h5></button></div> 
-                     <div className='row  'style={{backgroundColor:"#F0F8FF", marginLeft:"10%",marginRight:"9.5%"}}> 
+                     <div className='row  'style={{backgroundColor:"#F0F8FF", marginLeft:"10%",marginRight:"9.5%" , height: "600px"}}> 
                         <div className="col-6"> 
                         
-                        <div className="row container-fluid r2-c4 "> ข้อมูลเสนอซื้อสินค้า</div>
-                        <Grid container spacing={3} className="pad-10" >
+                        <div className="row container-fluid r2-c4 " style={{ marginTop:"5px"}}> ข้อมูลเสนอซื้อสินค้า</div>
+                        <Grid container spacing={3} className="pad-10" style={{backgroundColor:"#ffffff", marginTop:"18px"}} >
                                              
                                               
 
                                            
                                      <div className="" ><Grid item xs={20} >
+                                                
                                                  <TextField
                                                      className="textField-width"
                                                      id="outlined1"
                                                     label="ชนิดสินค้าที่ต้องการซื้อ"
+                                                    size="small" />
+                                                    
+                                              </Grid></div>
+                                    <div className=""><Grid item xs={20}>
+                                                <FormControl>
+                                                    <InputLabel >ประเภทสินค้า</InputLabel>
+                                                    <Select
+                                                    className="textField-width"
+                                                    labelId="demo-simple-select-label"
+                                                    id="demo-simple-select"
+                                            
+                                                    >
+                                                    <MenuItem value={10}>Ten</MenuItem>
+                                                    <MenuItem value={20}>Twenty</MenuItem>
+                                                    <MenuItem value={30}>Thirty</MenuItem>
+                                                    </Select>
+                                                    </FormControl> </Grid></div>
+                                    <div className=""style={{ marginTop:"5px"}}><Grid item xs={20}>
+                                                    <TextField
+                                                    className="textField-width"
+                                                    id="outlined-multiline-static"
+                                                    label="รายละเอียดสินค้า"
+                                                    multiline
+                                                    rows={3}
+                                                    
+                                                    variant="outlined"
+                                                    />
+                                              </Grid></div>
+                                    <div className=""><Grid item xs={20}>
+                                                 <TextField
+                                                     className="textField-width"
+                                                     id="outlined1"
+                                                    label="จำนวนสินค้า"
                                                     size="small" />
                                               </Grid></div>
                                     <div className=""><Grid item xs={20}>
@@ -48,35 +99,34 @@ class accessories extends React.Component{
                                                     label="ชนิดสินค้าที่ต้องการซื้อ"
                                                     size="small" />
                                               </Grid></div>
-                                    <div className=""><Grid item xs={20}>
-                                                 <TextField
-                                                     className="textField-width"
-                                                     id="outlined1"
-                                                    label="ชนิดสินค้าที่ต้องการซื้อ"
-                                                    size="small" />
+                                    <div className=""style={{ marginTop:"5px"}}><Grid item xs={20}>
+                                    <TextField
+                                                    className="textField-width"
+                                                    id="outlined-multiline-static"
+                                                    label="วิธีการจัดส่งสินค้า"
+                                                    multiline
+                                                    rows={3}
+                                                    
+                                                    variant="outlined"
+                                                    />
                                               </Grid></div>
                                     <div className=""><Grid item xs={20}>
-                                                 <TextField
-                                                     className="textField-width"
-                                                     id="outlined1"
-                                                    label="ชนิดสินค้าที่ต้องการซื้อ"
-                                                    size="small" />
+                                    <FormControl>
+                                                    <InputLabel >การรับประกันสินค้า</InputLabel>
+                                                    <Select
+                                                    className="textField-width"
+                                                    labelId="demo-simple-select-label"
+                                                    id="demo-simple-select"
+                                            
+                                                    >
+                                                    <MenuItem value={10}>Ten</MenuItem>
+                                                    <MenuItem value={20}>Twenty</MenuItem>
+                                                    <MenuItem value={30}>Thirty</MenuItem>
+                                                    </Select>
+                                                    </FormControl>
                                               </Grid></div>
-                                    <div className=""><Grid item xs={20}>
-                                                 <TextField
-                                                     className="textField-width"
-                                                     id="outlined1"
-                                                    label="ชนิดสินค้าที่ต้องการซื้อ"
-                                                    size="small" />
-                                              </Grid></div>
-                                    <div className=""><Grid item xs={20}>
-                                                 <TextField
-                                                     className="textField-width"
-                                                     id="outlined1"
-                                                    label="ชนิดสินค้าที่ต้องการซื้อ"
-                                                    size="small" />
-                                              </Grid></div>
-                                    <div className=""><Grid item xs={20}>
+
+                                              <div className=""style={{ marginTop:"10px"}}><Grid item xs={20}>รูปตัวอย่างสินค้า
                                                  <TextField
                                                      className="textField-width"
                                                      id="outlined1"
@@ -85,38 +135,107 @@ class accessories extends React.Component{
                                               </Grid></div>
                         </Grid></div>
                     
-                        <div className="col-6  r2-c4"> รายการเสนอซื้อ 
-                        <div> <table class="table table-White">
-                                    <thead>
-                                    <tr>
-                                        <th>ลำดับ</th>
-                                        <th>หัวเรื่อง</th>
-                                        <th>ประเภทสินค้า</th>
-                                        <th>จำนวนที่ต้องการ</th>
-                                        <th>จัดการ</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>อยากได้วัว</td>
-                                        <td>ซื้อวัว</td>
-                                        <td>1</td>
-                                    </tr>
-                                    <tr>
-                                    <td>1</td>
-                                        <td>อยากได้วัว</td>
-                                        <td>ซื้อวัว</td>
-                                        <td>1</td>
-                                    </tr>
-                                    <tr>
-                                    <td>1</td>
-                                        <td>อยากได้วัว</td>
-                                        <td>ซื้อวัว</td>
-                                        <td>1</td>
-                                    </tr>
-                                    </tbody>
-                                </table>    </div></div></div>
+                        <div className="col-6  r2-c4"> รายการเสนอซื้อ  
+                        
+                                                 <TextField className="textField-width2  " style={{backgroundColor:"#F0F8FF",marginLeft:"63.5%", marginTop:"2px"}}
+                                                     id="outlined1"
+                                                    label="ค้นหาชื่อสินค้า"
+                                                    size="small" /> 
+                                                    
+                                                    <IconButton color="primary" aria-label="upload picture" component="span" size="Large " style={{backgroundColor:"#F0F8FF", marginTop:"0px"}}>
+                                                    <SearchIcon  />
+                                                   </IconButton>
+                        <div> <Table className aria-label="simple table" style={{backgroundColor:"#ffffff", marginTop:"0px"}}>
+                                
+                                <TableHead >
+                                
+                                <TableRow >
+                                    <TableCell align="left">ลำดับ</TableCell>
+                                    <TableCell align="center">หัวเรื่อง</TableCell>
+                                    <TableCell align="center">ประเภทสินค้า</TableCell>
+                                    <TableCell align="center">จำนวนที่ต้องการ</TableCell>
+                                    <TableCell align="center">จัดการสินค้า</TableCell>
+                                     
+                                </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                 
+                                    <TableRow >
+                                    
+                                    <TableCell align="center">1</TableCell>
+                                    <TableCell align="center">เนื้อโค</TableCell>
+                                    <TableCell align="center">M@A</TableCell>
+                                    <TableCell align="center">145</TableCell>
+                                    
+                                
+                                    
+                                    <TableCell align="center"> 
+                                                    <IconButton color="primary" aria-label="upload picture" component="span" size="Large " style={{backgroundColor:"White", marginTop:"0px"}}>
+                                                    <AssignmentIcon  />
+                                                   </IconButton>
+
+                                                   <IconButton color="secondary" aria-label="upload picture" component="span" size="Large " style={{backgroundColor:"White", marginTop:"0px"}}>
+                                                    <DeleteForeverIcon />
+                                                   </IconButton>
+                                                   
+                                                   
+                                                   </TableCell>
+                                
+                                    </TableRow>
+                               
+                                </TableBody> 
+                                <TableBody>
+                                 
+                                    <TableRow >
+                                    
+                                    <TableCell align="center">1</TableCell>
+                                    <TableCell align="center">เนื้อโค</TableCell>
+                                    <TableCell align="center">M@A</TableCell>
+                                    <TableCell align="center">145</TableCell>
+                                    
+                                
+                                    
+                                    <TableCell align="center"> 
+                                                    <IconButton color="primary" aria-label="upload picture" component="span" size="Large " style={{backgroundColor:"White", marginTop:"0px"}}>
+                                                    <AssignmentIcon  />
+                                                   </IconButton>
+
+                                                   <IconButton color="secondary" aria-label="upload picture" component="span" size="Large " style={{backgroundColor:"White", marginTop:"0px"}}>
+                                                    <DeleteForeverIcon />
+                                                   </IconButton>
+                                                   
+                                                   
+                                                   </TableCell>
+                                
+                                    </TableRow>
+                               
+                                </TableBody>
+                                <TableBody>
+                                 
+                                    <TableRow >
+                                    
+                                    <TableCell align="center">1</TableCell>
+                                    <TableCell align="center">เนื้อโค</TableCell>
+                                    <TableCell align="center">M@A</TableCell>
+                                    <TableCell align="center">145</TableCell>
+                                    
+                                
+                                    
+                                    <TableCell align="center"> 
+                                                    <IconButton color="primary" aria-label="upload picture" component="span" size="Large " style={{backgroundColor:"White", marginTop:"0px"}}>
+                                                    <AssignmentIcon  />
+                                                   </IconButton>
+
+                                                   <IconButton color="secondary" aria-label="upload picture" component="span" size="Large " style={{backgroundColor:"White", marginTop:"0px"}}>
+                                                    <DeleteForeverIcon />
+                                                   </IconButton>
+                                                   
+                                                   
+                                                   </TableCell>
+                                
+                                    </TableRow>
+                               
+                                </TableBody>  </Table> </div></div></div>
                         
                 
                  

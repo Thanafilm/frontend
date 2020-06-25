@@ -48,7 +48,7 @@ class Webpage extends Component{
           
           <div className='row  'style={{backgroundColor:"#e6e6e6",height: "400px",marginLeft:"10%",marginRight:"10%"}}>  
                <div className="col-md-6"><div className="col-md "><img src={photo1} alt="photo1" className="img1-box box" ></img> </div></div>    
-               <div className="col-md-6"  ><h3 className="card-title">ตลาดซื้อ ขายและประมูลโคออนไลน์ </h3><h4 className="card-title">Cattle Market and Auction Online</h4><p className="card-text">เจ้าแดงชาโรดลส์</p><p className="card-text">ราคา: 30000</p><ul className="navbar-nav"><li className="nav-item"><a className="nav-link" href="#">ดูการประมูล</a> </li></ul>
+               <div className="col-md-6"  ><h3 class="card-title">ตลาดซื้อ ขายและประมูลโคออนไลน์ </h3><h4 class="card-title">Cattle Market and Auction Online</h4><p class="card-text">เจ้าแดงชาโรดลส์</p><p class="card-text">ราคา: 30000</p><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="#">ดูการประมูล</a> </li></ul>
           </div></div>
 
           <div className='row ' style={{backgroundColor:"White", marginLeft:"10%",marginRight:"10%"}}>
@@ -56,10 +56,10 @@ class Webpage extends Component{
           </div> 
 
           <div className='row ' style={{backgroundColor:"#e6e6e6", marginLeft:"10%",marginRight:"10%"}}>
-          <div className="col-md-3"><div className="col-md box-bg2"><img src={photo2} alt="photo2" className="img4-box" ></img><h5 className="card-title">เจ้าแดง : 30000 </h5><p className="card-text">เหลือเวลาอีก: 12:20:56 นาที</p> <Button variant="success">ประมูล</Button></div></div>    
-          <div className="col-md-3"><div className="col-md box-bg2"><img src={photo6} alt="photo6" className="img5-box" ></img><h5 className="card-title">พายุ : 50000</h5><p className="card-text">เหลือเวลาอีก: 12:20:56 นาที</p> <Button variant="success">ประมูล</Button></div></div>
-          <div className="col-md-3"><div className="col-md box-bg2"><img src={photo4} alt="photo4" className="img6-box" ></img><h5 className="card-title">มะพร้าว : 28000</h5> <p className="card-text">เหลือเวลาอีก: 12:20:56 นาที</p><Button variant="success">ประมูล</Button></div></div>    
-          <div className="col-md-3"><div className="col-md box-bg2"><img src={photo5} alt="photo5" className="img7-box" ></img><h5 className="card-title">ขอน : 47000</h5><p className="card-text">เหลือเวลาอีก: 12:20:56 นาที</p><Button variant="success">ประมูล</Button> </div></div>
+          <div className="col-md-3"><div className="col-md box-bg2"><img src={photo2} alt="photo2" className="img4-box" ></img><h5 class="card-title">เจ้าแดง : 30000 </h5><p class="card-text">เหลือเวลาอีก: 12:20:56 นาที</p> <Button variant="success">ประมูล</Button></div></div>    
+          <div className="col-md-3"><div className="col-md box-bg2"><img src={photo6} alt="photo6" className="img5-box" ></img><h5 class="card-title">พายุ : 50000</h5><p class="card-text">เหลือเวลาอีก: 12:20:56 นาที</p> <Button variant="success">ประมูล</Button></div></div>
+          <div className="col-md-3"><div className="col-md box-bg2"><img src={photo4} alt="photo4" className="img6-box" ></img><h5 class="card-title">มะพร้าว : 28000</h5> <p class="card-text">เหลือเวลาอีก: 12:20:56 นาที</p><Button variant="success">ประมูล</Button></div></div>    
+          <div className="col-md-3"><div className="col-md box-bg2"><img src={photo5} alt="photo5" className="img7-box" ></img><h5 class="card-title">ขอน : 47000</h5><p class="card-text">เหลือเวลาอีก: 12:20:56 นาที</p><Button variant="success">ประมูล</Button> </div></div>
           </div> 
              
             

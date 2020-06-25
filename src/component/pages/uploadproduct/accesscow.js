@@ -19,7 +19,7 @@ import Table from '@material-ui/core/Table';
 
 
 
-class cattleproduct extends React.Component{
+class accesscow extends React.Component{
     render(){
         return(
             <div>
@@ -32,7 +32,7 @@ class cattleproduct extends React.Component{
                         <div className="row " style={{ marginTop:"5px"}}>  
                                                 <IconButton color="primary" aria-label="upload picture" component="span" size="Large " style={{backgroundColor:"White", marginTop:"5px"}}>
                                                     <ShoppingCartIcon />
-                                                   </IconButton> <h5 style={{ marginTop:"12px"}}>ลงทะเบียนขายผลิตภัณฑ์จากโค</h5>  </div>
+                                                   </IconButton> <h5 style={{ marginTop:"12px"}}>ลงทะเบียนขายสินค้าเบ็ดเตล็ด</h5>  </div>
                                         <Grid container spacing={3}  style={{backgroundColor:"#ffffff",height:"100px", marginTop:"18px",marginLeft:"2px",marginRight:"15"}} >
                                        อัพโหลดรูปภาพ <center><p  style={{color:"red",marginLeft:"5px" }}>อัพโหลดรูปภาพ 4 รูป ประกอบด้วย ด้านหน้า หลัง ซ้ายและขวา ขนาดรูปภาพไม่เกิน100MB</p></center>
                                         <div> <h8> <Button type="submit" className="btn btn-success"  style={{marginLeft:"10px"}}>เลือกรูปภาพ 0/4</Button></h8></div>    
@@ -192,6 +192,6 @@ class cattleproduct extends React.Component{
         );
     }
 }
-export default cattleproduct;
+export default accesscow;
 
 

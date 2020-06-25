@@ -6,8 +6,6 @@ import Navbar from "../../../Navbar";
 import Footer from '../../../Footer';
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
-import SaveIcon from "@material-ui/icons/Save";
-import { makeStyles } from "@material-ui/core/styles";
 import './styleAbor.css';
 import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
@@ -42,11 +40,11 @@ class accessories extends React.Component{
                 <HeaderLogin/>
                 <Navbar/>
                      <div className='row ' style={{backgroundColor:"#ffffff",marginTop:"20px", marginLeft:"10%",marginRight:"10%"}}><button type="button" class="btn btn-success"><h5>เสนอซื้อสินค้า</h5></button></div> 
-                     <div className='row  'style={{backgroundColor:"#F0F8FF", marginLeft:"10%",marginRight:"9.5%" , height: "600px"}}> 
+                     <div className='row  'style={{backgroundColor:"#F2F2F2", marginLeft:"10%",marginRight:"9.5%" , height: "740px"}}> 
                         <div className="col-6"> 
                         
                         <div className="row container-fluid r2-c4 " style={{ marginTop:"5px"}}> ข้อมูลเสนอซื้อสินค้า</div>
-                        <Grid container spacing={3} className="pad-10" style={{backgroundColor:"#ffffff", marginTop:"18px"}} >
+                        <Grid container spacing={3} className="pad-10" style={{backgroundColor:"#ffffff", marginTop:"18px",height: "640px"}} >
                                              
                                               
 
@@ -127,13 +125,23 @@ class accessories extends React.Component{
                                               </Grid></div>
 
                                               <div className=""style={{ marginTop:"10px"}}><Grid item xs={20}>รูปตัวอย่างสินค้า
-                                                 <TextField
-                                                     className="textField-width"
-                                                     id="outlined1"
-                                                    label="ชนิดสินค้าที่ต้องการซื้อ"
-                                                    size="small" />
+                                              <div class="ml-2 col-sm-6">
+                                                    <img src="https://placehold.it/80x80" id="preview" class="img-thumbnail"></img>
+                                                    </div>
+                                              <div class="ml-2 col-sm-6">
+                                                   
+                                                    <div id="msg"></div>
+                                                    <form method="post" id="image-form">
+                                                        <input type="file" name="img[]" class="file" accept="image/*"></input>
+                                                        
+                                                    </form>
+                                                    </div>
+                                                    
                                               </Grid></div>
-                        </Grid></div>
+                                              
+                        </Grid>
+                        <Button type="submit" className="btn btn-primary"style={{ marginLeft:"280px",margintop:"200px"}}  column sm ={2}>บันทึก</Button>
+                                                <Button type="reset" className="btn btn-danger">ยกเลิก</Button></div>
                     
                         <div className="col-6  r2-c4"> รายการเสนอซื้อ  
                         

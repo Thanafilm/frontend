@@ -1,5 +1,4 @@
 import React from "react";
-import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -16,7 +15,6 @@ import HeaderLogin from "../../../HeaderLogin.js";
 import Navbar from "../../../Navbar";
 import Footer from '../../../Footer';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
-import Grid from "@material-ui/core/Grid";
 import './manage.css';
 import SearchIcon from '@material-ui/icons/Search';
 
@@ -42,8 +40,8 @@ class manageproduct extends React.Component{
                                      style={{outline:"none"}}
                                     startIcon={<ShoppingBasketIcon  />}
                                 >
-                                  <h5>จัดการสินค้าเบ็ดเตล็ด</h5>   
-                                </Button>  <TextField className="textField-width1  " style={{backgroundColor:"White",marginLeft:"68%", marginTop:"2px"}}
+                                  <h5>จัดการผลิตภัณฑ์จากโค</h5>   
+                                </Button>  <TextField className="textField-width1  " style={{backgroundColor:"White",marginLeft:"65%", marginTop:"2px"}}
                                                      id="outlined1"
                                                     label="ค้นหาชื่อสินค้า"
                                                     size="small" /> 

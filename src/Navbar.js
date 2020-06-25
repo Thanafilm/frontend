@@ -48,7 +48,7 @@ render(){
             <Link to="/upload/cattleproduct">
               <div>ลงทะเบียนขายผลิตภัณฑ์จากโค</div>
             </Link>
-            <Link to="/checkup">
+            <Link to="/upload/accesscow">
               <div>ลงทะเบียนสินค้าเบ็ดเตล็ด</div>
             </Link>
             

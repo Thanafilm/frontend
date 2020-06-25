@@ -39,7 +39,7 @@ render(){
         <div className="dropdown">
           <div className="dropbtn">ลงทะเบียนสินค้า</div>
           <div className="dropdown-content">
-            <Link to="/fatten">
+            <Link to="/upload/salecattle">
               <div>ลงทะเบียนขายโคมีชีวิต</div>
             </Link>
             <Link to="/induction">

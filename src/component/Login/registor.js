@@ -115,6 +115,7 @@ class signup extends Component{
                         onChange={this.handlechange}
                         />
                 </div> 
+              
                 
                 
                 <Button type="submit" className="btn btn-primary" column sm ={2}>บันทึก</Button>

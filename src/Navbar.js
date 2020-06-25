@@ -3,7 +3,7 @@ import Signout from "./Signout";
 import "./styleNavbar.css";
 import { Link } from "react-router-dom";
 import Avatar from "@material-ui/core/Avatar";
-import firebase from "./backEnd/firebase"
+//import firebase from "./backEnd/firebase"
 import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
@@ -19,27 +19,7 @@ import MailIcon from '@material-ui/icons/Mail';
 
 class NavbarLogin extends Component {
 
- constructor(props){
-   super(props);
-   this.state={
-     currentUser:""
-   }
- }
-   async componentDidMount() {
-    
-    await firebase.auth().onAuthStateChanged(user => {
-   
-      if (user) {
-        this.setState({
-          currentUser: user.email
-        });
-       
-      }
-    });
-
-
-  }
-  
+ 
 
 render(){
  
@@ -48,7 +28,7 @@ render(){
     <div className="container-fluid">
       <nav className="row">
         <div className="dropdown">
-          <Link to="/login">
+          <Link to="/home">
             {" "}
             <div className="dropbtn">หน้าหลัก</div>
           </Link>
@@ -65,7 +45,7 @@ render(){
             <Link to="/induction">
               <div>ลงทะเบียนโคประมูลมีชีวิต</div>
             </Link>
-            <Link to="/breed">
+            <Link to="/upload/cattleproduct">
               <div>ลงทะเบียนขายผลิตภัณฑ์จากโค</div>
             </Link>
             <Link to="/checkup">

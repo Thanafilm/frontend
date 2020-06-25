@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import { Button } from "react-bootstrap";
-import firebase from "./backEnd/firebase/index";
+
 import Badge from '@material-ui/core/Badge';
 import Avatar from '@material-ui/core/Avatar';
 import {Link} from "react-router-dom";
@@ -57,10 +57,6 @@ const useStyles = makeStyles((theme) => ({
 class Signout extends Component {
  
 
-   logout = e => {
-    //console.log("Logout");
-    firebase.auth().signOut();
-  };
 
 
   render() {

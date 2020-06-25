@@ -7,82 +7,45 @@ import React,{Component} from 'react';
 import "../styleWebpage.css";
 import {Form,Button} from 'react-bootstrap'; 
 import HeaderLogin from '../../HeaderLogin';
-import firebase from './../../backEnd/firebase/index';
 import Home from "./../Home/homepage";
 import Footer from '../../Footer';
-//import { BrowserRouter, Route, Switch, Router,Redirect,Link } from "react-router-dom";
+
+//redux
+import { connect} from 'react-redux';
+import {loginUser} from '../../redux/action/UserAction';
+
+
 class Login extends Component{
+  constructor(){
+    super();
+    this.state ={
+      email : '',
+      password : '',
+      errors : {}
+    };
+  }
 
-
-  constructor(props) {
-    super(props)
-
-            this.state = {
-              email: '',
-              password: '',
-              message: '',
-              currentUser: null,
-            }
-          }
-              // setState ตาม name ที่ได้รับมาจากForm
-          onChange = e => {
-            const { name, value } = e.target
-            console.log(name+":"+value);
-            this.setState({
-              [name]: value
-            })
-
-         
-          }
-
-          handleSignup=(e)=>{
-            //console.log(this.state.email);
-            //console.log(this.state.password);
-        
-            e.preventDefault();
-            const { email, password } = this.state
-         
-            //firebase.auth().xxxMethod()
-            //firebase.auth().xxxMethod().then(function() || ()=>{}  )
-        
-            firebase.auth().signInWithEmailAndPassword(email, password)
-              .then(response => {
-                //console.log(response.user);
-                
-              })
-              .catch(error => {
-                this.setState({
-                  message: error.message
-                })
-                alert('ไอดี หรือ  รหัสผ่าน ของท่านไม่ถูกต้อง');
-              })
-          }
-     //หลังจาก renderแล้วจะทำการเชคว่ามีการล็อคอินอยู่ไหม ถ้ามี ไป setState currentUser: user
-        
-
-
-     componentDidMount() {
-      firebase.auth().onAuthStateChanged(user => {
-        if (user) {
-          this.setState({
-            currentUser: user
-          });
-          //console.log("Logined already");
-        }
-      });
-    
-    }
+  handleSubmit = (event)=>{
+    event.preventDefault();
    
-
-
-
-  render(){
-
-       if(this.state.currentUser){
-            return (<Home/>)
-       }
-    //if user haven't id and password  return -->
+    const userData = {
+      email : this.state.email,
+      password : this.state.password
+    };
+    this.props.loginUser(userData,this.props.history);
+  
+  };
+  handlechange = (event) => {
+    this.setState({
+      [event.target.name] : event.target.value
+    });
+  };
+    render(){
+     
+      const {errors} =this.state;
+    
       return(
+
           <div className="container-fluid ">
                
 
@@ -90,7 +53,7 @@ class Login extends Component{
                 <div className="center k1">
               <div > 
                     <div className="bg-box-log-color">
-                    <Form  className="form-padding " onSubmit={this.handleSignup} >
+                    <Form  className="form-padding " onSubmit={this.handleSubmit} >
                     <div className="title1">เข้าสู่ระบบ</div>
                     <Form.Group controlId="formBasicEmail" className="form-padding-top">
                       <Form.Label>ชื่อผู้ใช้</Form.Label>
@@ -99,7 +62,8 @@ class Login extends Component{
                       name="email"
                       type="text" 
                       placeholder="Enter email"
-                      onChange={this.onChange}
+                      value = {this.state.email}
+                      onChange={this.handlechange}
                        /> 
                     </Form.Group>
                   
@@ -110,7 +74,8 @@ class Login extends Component{
                       name="password"
                       type="password" 
                       placeholder="Password" 
-                      onChange={this.onChange}
+                      value = {this.state.password}
+                      onChange={this.handlechange}
                       />
                     </Form.Group>
                     <Form.Group controlId="formBasicCheckbox">
@@ -136,6 +101,13 @@ class Login extends Component{
       )
   }
 }
-export default Login;
 
-//กดปุ่ม ---->link to component (ส่งprop ไปตาม link) อีกทีหนึ่ง น่าจะแก้ได้
+const mapStatetoProps = state =>({
+  user : state.user,
+  UI : state.UI
+});
+const mapActiontoprops = {
+  loginUser
+}
+export default connect(mapStatetoProps,mapActiontoprops)(Login);
+

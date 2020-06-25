@@ -3,7 +3,53 @@ import {form,Button} from "react-bootstrap";
 import "../../../component/styleWebpage.css";
 import HeaderLogin from "../../../HeaderLogin.js";
 import Navbar from "../../../Navbar";
+import Axios from "axios";
 class upsalecattle extends Component{
+   /* constructor(){
+        super();
+        this.state = {
+            name : '',
+            detail : '',
+            cattleid : '',
+            type : '',
+            weight : '',
+            gender : '',
+            spicies : '',
+            birthdate : '',
+            price : '',
+            dadname : '',
+            momname : ''
+        }
+    }
+    handlesubmit = (event) =>{
+        event.preventDefault();
+        this.setState({
+            loading : true
+        });
+        const newCattle = {
+            name : this.state.name,
+            detail : this.state.detail,
+            cattleid : this.state.cattleid,
+            type : this.state.type,
+            weight : this.state.weight,
+            gender : this.state.gender,
+            spicies : this.state.spicies,
+            birthdate : this.state.birthdate,
+            price : this.state.price,
+            dadname : this.state.dadname,
+            momname : this.state.momname
+        }
+        Axios.post('/cattle',newCattle)
+        .then(res=>{
+            console.log(res.data);
+            localStorage.setItem(FBidToken,`Bearer ${res.data.token}`);
+            this.setState({
+                loading:false
+            });
+            this.props.history.push('/home');
+        })
+        .cath
+    }*/
     render(){
         return(
             <div>

@@ -69,7 +69,7 @@ class offerbuytable extends React.Component{
                                         <TableCell align="center">M@A</TableCell>
                                         <TableCell align="center">145</TableCell>
                                         <TableCell align="center">10</TableCell>
-                                        <TableCell align="center"><Button variant="contained" color="primary" href="#contained-buttons"> <a href="/offer/Details"> คลิก</a> </Button></TableCell>
+                                        <TableCell align="center"><a href="/offer/Details"><Button variant="contained" color="primary" href="#contained-buttons">  คลิก</Button></a> </TableCell>
                                     
                                         </TableRow>
                                    

@@ -17,6 +17,7 @@ import Table from '@material-ui/core/Table';
 import Button from '@material-ui/core/Button';
 import AddPhotoAlternateIcon from '@material-ui/icons/AddPhotoAlternate';
 import MovieIcon from '@material-ui/icons/Movie';
+import  TextField from '@material-ui/core/Card/'
 
 
 
@@ -63,10 +64,19 @@ class salecattle extends React.Component{
                                         </Grid>
                                         <Grid container spacing={3}  style={{backgroundColor:"#ffffff",height:"1210px", marginTop:"18px",marginLeft:"2px",marginRight:"15"}} >
                                         <div className = "Row f1">
-                                                    <div className= "form-group">
-                                                        <label for="CattleName">ชื่อโค</label><input type = "text" name ="CattleName"id ="ctn"className ="form-control is invalid"/>
-                                                        
-                                                    </div> 
+                                        <Grid container spacing = {3}>
+                                            <Grid item xs = {3} >
+                                                <label >รหัสผ่าน</label>
+                                            </Grid>
+                                            <Grid item xs = {8}>
+                                            <TextField 
+                                                id = "password"
+                                                name = "password"
+                                                type = "password"
+                                                label = "รหัสผ่าน"
+                                               />
+                                            </Grid>
+                                         </Grid>
                                                     <div className= "form-group">
                                                         <label for="IdCattle">หมายเลขประจำตัวสัตว์</label><input type = "text" name ="IdCattle"id ="idc"className ="form-control is invalid"/>
                                                     </div> 

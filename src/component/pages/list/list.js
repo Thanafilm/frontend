@@ -41,8 +41,8 @@ class list extends React.Component{
                                      style={{outline:"none"}}
                                     startIcon={<ContactsIcon  />}
                                 >
-                                  <h5>รายการรับเรื่อง</h5>   
-                                </Button>  <TextField className="textField-width5  " style={{backgroundColor:"#e6e6e6",marginLeft:"70%"}}
+                                  <h5>จัดการรับเเจ้งเตือน</h5>   
+                                </Button>  <TextField className="textField-width5  " style={{backgroundColor:"#e6e6e6",marginLeft:"67.5%"}}
                                                      id="outlined1"
                                                     label="ค้นหารายการรับเรื่อง"
                                                     size="small" /> 

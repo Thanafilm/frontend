@@ -75,7 +75,7 @@ class Home extends Component {
           
           <div className="col-md-4"  style={{marginTop:"10px"}}><h3 class="card-title"style={{color:"#1a0d00",fontFamily:"DB-Adman-x_3"}}>ตลาดซื้อ ขายและประมูลโคออนไลน์ </h3><h4 class="card-title" style={{color:"#e67300",fontFamily:"DB-Adman-x_3"}}>Cattle Market and Auction Online</h4><hr></hr><h5><p class="card-text" style={{marginTop:"20px"}}>เจ้าแดงชาโรเลส์</p></h5><h5><p class="card-text" style={{color:"red"}}>฿20,500,00 บาท</p></h5><p class="card-text">เหลือเวลาอีก: 12:20:56 นาที</p><Button variant="contained"
                                     color="primary"
-                                    size="small"
+                                    size="Large"
                                 style={{outline:"none"}}
                                     startIcon={<GavelOutlinedIcon/>}
                                 >
@@ -93,7 +93,7 @@ class Home extends Component {
                           
                               <Button variant="contained"
                                     color="primary"
-                                    size="small"
+                                    size="Large"
                                 style={{outline:"none"}}
                                     startIcon={<GavelOutlinedIcon/>}
                                 >
@@ -102,7 +102,7 @@ class Home extends Component {
                                    </div></div>    
           <div className="col-md-3"><div className="col-md box-bg2"><img src={photo6} alt="photo6" className="img5-box" ></img><h5 class="card-title"style={{marginTop:"5px"}}>พายุ : ฿20,500.00 บาท</h5><p class="card-text">เหลือเวลาอีก: 12:20:56 นาที</p> <Button variant="contained"
                                     color="primary"
-                                    size="small"
+                                    size="Large"
                                 style={{outline:"none"}}
                                     startIcon={<GavelOutlinedIcon/>}
                                 >
@@ -110,7 +110,7 @@ class Home extends Component {
                                 </Button></div></div>
           <div className="col-md-3"><div className="col-md box-bg2"><img src={photo4} alt="photo4" className="img6-box" ></img><h5 class="card-title"style={{marginTop:"5px"}}>มะพร้าว : ฿20,500.00 บาท</h5> <p class="card-text">เหลือเวลาอีก: 12:20:56 นาที</p><Button variant="contained"
                                     color="primary"
-                                    size="small"
+                                    size="Large"
                                 style={{outline:"none"}}
                                     startIcon={<GavelOutlinedIcon/>}
                                 >
@@ -118,7 +118,7 @@ class Home extends Component {
                                 </Button></div></div>    
           <div className="col-md-3"><div className="col-md box-bg2"><img src={photo5} alt="photo5" className="img7-box" ></img><h5 class="card-title"style={{marginTop:"5px"}}>ขอน : ฿20,500.00 บาท</h5><p class="card-text">เหลือเวลาอีก: 12:20:56 นาที</p><Button variant="contained"
                                     color="primary"
-                                    size="small"
+                                    size="Large"
                                 style={{outline:"none"}}
                                     startIcon={<GavelOutlinedIcon/>}
                                 >

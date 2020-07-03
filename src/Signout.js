@@ -5,7 +5,7 @@ import Avatar from '@material-ui/core/Avatar';
 import {Link} from "react-router-dom";
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import MailIcon from '@material-ui/icons/Mail';
-import { green } from '@material-ui/core/colors';
+import { lightBlue } from '@material-ui/core/colors';
 import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -68,7 +68,7 @@ class Signout extends Component {
 
       <div style ={{float:"right"}} >
         <Badge badgeContent={4} color="secondary" size="Large "style={{ marginTop:"10px",marginRight:"20px"}}>
-        <MailIcon style={{ color: green[500] }} />
+        <MailIcon style={{ color: lightBlue[50] }} />
       </Badge>
 
       <StyledBadge style={{ marginRight:"0px"}}

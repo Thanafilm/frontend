@@ -76,10 +76,9 @@ class detailssellcow extends React.Component{
                                             <MenuItem value="">
                                             <em>ไม่มี</em>
                                             </MenuItem>
-                                            <MenuItem value={10}>พะเยา</MenuItem>
-                                            <MenuItem value={20}>เชียงราย</MenuItem>
-                                            <MenuItem value={30}>น่าน</MenuItem>
-                                            <MenuItem value={30}>ลำปาง</MenuItem>
+                                            <MenuItem value={10}>แสดงรายปี</MenuItem>
+                                            <MenuItem value={20}>แสดงรายเดือน</MenuItem>
+                                            <MenuItem value={30}>แสดงรายวัน</MenuItem>
                                             </Select>
                                         </FormControl>
 

@@ -3,12 +3,14 @@ import "../../../component/styleWebpage.css";
 import HeaderLogin from "../../../HeaderLogin.js";
 import Navbar from "../../../Navbar";
 import Footer from '../../../Footer';
-import {Button} from 'react-bootstrap';
 import product1 from "../../Img/product1.jpg";
 import product2 from "../../Img/product2.jpg";
 import product3 from "../../Img/product3.jpg";
 import product4 from "../../Img/product4.jpg";
 import "./sale.css";
+import Button from '@material-ui/core/Button';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+
 
 
 class products extends React.Component{
@@ -30,10 +32,38 @@ class products extends React.Component{
                          </div> </div></div> </div>
             <div className="col-6 text-right r2-c4"> รายการเสนอซื้อ</div></div>
                 <div className='row ' style={{backgroundColor:"#ffffff", marginLeft:"10%",marginRight:"10%"}}>
-                     <div className="col-md-3"><div className="col-md box-bg3"><img src={product1} alt="product1" className="img4-box" ></img><h6 class="card-title">ฟาร์ม: โคขุนฟาร์ม </h6><h6 class="card-title">ผู้ขาย: ***** </h6><p class="text-dark">฿20,500.00 บาท</p> <a href="/details/product"><Button variant="success">รายละเอียด</Button></a></div></div>    
-                     <div className="col-md-3"><div className="col-md box-bg3"><img src={product2} alt="product2" className="img5-box" ></img><h6 class="card-title">ฟาร์ม: โคขุนฟาร์ม</h6><h6 class="card-title">ผู้ขาย: ***** </h6><p class="text-dark">฿20,500.00 บาท</p><Button variant="success">รายละเอียด</Button></div></div>
-                     <div className="col-md-3"><div className="col-md box-bg3"><img src={product3} alt="product3" className="img6-box" ></img><h6 class="card-title">ฟาร์ม: โคขุนฟาร์ม</h6> <h6 class="card-title">ผู้ขาย: ***** </h6><p class="text-dark">฿20,500.00 บาท</p><Button variant="success">รายละเอียด</Button></div></div>    
-                      <div className="col-md-3"><div className="col-md box-bg3"><img src={product4} alt="product4" className="img7-box" ></img><h6 class="card-title">ฟาร์ม: โคขุนฟาร์ม</h6><h6 class="card-title">ผู้ขาย: ***** </h6><p class="text-dark">฿20,500.00 บาท</p><Button variant="success">รายละเอียด</Button> </div></div>
+                     <div className="col-md-3"><div className="col-md box-bg3"><img src={product1} alt="product1" className="img4-box" ></img><h6 class="card-title">ฟาร์ม: โคขุนฟาร์ม </h6><h6 class="card-title">ผู้ขาย: ***** </h6><p class="text-dark">฿20,500.00 บาท</p> <a href="/details/product"><Button variant="contained"
+                                    color="primary"
+                                    size="small"
+                                style={{outline:"none"}}
+                                    startIcon={<AddShoppingCartIcon/>}
+                                >
+                                    รายละเอียด
+                                </Button></a></div></div>    
+                     <div className="col-md-3"><div className="col-md box-bg3"><img src={product2} alt="product2" className="img5-box" ></img><h6 class="card-title">ฟาร์ม: โคขุนฟาร์ม</h6><h6 class="card-title">ผู้ขาย: ***** </h6><p class="text-dark">฿20,500.00 บาท</p><Button variant="contained"
+                                    color="primary"
+                                    size="small"
+                                style={{outline:"none"}}
+                                    startIcon={<AddShoppingCartIcon/>}
+                                >
+                                    รายละเอียด
+                                </Button></div></div>
+                     <div className="col-md-3"><div className="col-md box-bg3"><img src={product3} alt="product3" className="img6-box" ></img><h6 class="card-title">ฟาร์ม: โคขุนฟาร์ม</h6> <h6 class="card-title">ผู้ขาย: ***** </h6><p class="text-dark">฿20,500.00 บาท</p><Button variant="contained"
+                                    color="primary"
+                                    size="small"
+                                style={{outline:"none"}}
+                                    startIcon={<AddShoppingCartIcon/>}
+                                >
+                                    รายละเอียด
+                                </Button></div></div>    
+                      <div className="col-md-3"><div className="col-md box-bg3"><img src={product4} alt="product4" className="img7-box" ></img><h6 class="card-title">ฟาร์ม: โคขุนฟาร์ม</h6><h6 class="card-title">ผู้ขาย: ***** </h6><p class="text-dark">฿20,500.00 บาท</p><Button variant="contained"
+                                    color="primary"
+                                    size="small"
+                                style={{outline:"none"}}
+                                    startIcon={<AddShoppingCartIcon/>}
+                                >
+                                    รายละเอียด
+                                </Button></div></div>
                  </div> 
                 
                  <div className='row ' style={{backgroundColor:"#ffffff", marginLeft:"10%",marginRight:"10%"}}><ul class="col-12 pagination justify-content-end text-right">

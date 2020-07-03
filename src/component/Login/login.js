@@ -5,109 +5,144 @@
 
 import React,{Component} from 'react';
 import "../styleWebpage.css";
-import {Form,Button} from 'react-bootstrap'; 
+import { Link } from 'react-router-dom';
 import HeaderLogin from '../../HeaderLogin';
 import Home from "./../Home/homepage";
 import Footer from '../../Footer';
+import withstyles from '@material-ui/core/styles/withStyles';
+import { Grid, Typography, TextField, Button, CircularProgress } from '@material-ui/core'
+import axios from 'axios'
+const style= {
+  form : {
+      textAlign :'center',
+      margin : '300px auto 300px auto'
+  },
+  title : {
+      margin : '20px auto 20px auto'
+  },
+  textt :{
+      margin : '5px auto 5px auto',
+      width : '400px'
 
-//redux
-import { connect} from 'react-redux';
-import {loginUser} from '../../redux/action/UserAction';
-
+  },
+  Button : {
+      margin : '10px auto 10px auto',
+      position : 'relative'
+  },
+  spin : { 
+      position : 'absolute'
+  }
+}
 
 class Login extends Component{
   constructor(){
     super();
-    this.state ={
-      email : '',
-      password : '',
-      errors : {}
-    };
-  }
-
-  handleSubmit = (event)=>{
-    event.preventDefault();
-   
-    const userData = {
-      email : this.state.email,
-      password : this.state.password
-    };
-    this.props.loginUser(userData,this.props.history);
-  
-  };
-  handlechange = (event) => {
+    this.state = {
+        email : '',
+        password : '',
+        loading : false,
+        errors: {}
+    } 
+}
+handleChange = (event) =>{
     this.setState({
-      [event.target.name] : event.target.value
+        [event.target.name]: event.target.value
     });
-  };
+}
+handleSubmit= (event) =>{
+    event.preventDefault();
+    this.setState({
+        loading : true
+    });
+    const userData = {
+        email : this.state.email,
+        password : this.state.password
+    }
+    axios
+    .post('/login',userData)
+    .then((res)=>{
+        console.log(res.data);
+        localStorage.setItem('FBidToken',`Bearer ${res.data.token}`); 
+        this.setState({
+            loading: false
+        });
+        this.props.history.push('/home');
+    })
+    .catch(err=>{
+        this.setState({
+            errors : err.response.data,
+            loading :false
+        })
+    })
+}
     render(){
-     
-      const {errors} =this.state;
+      const {classes} = this.props
+      const {errors,loading} = this.state;
     
       return(
 
-          <div className="container-fluid ">
-               
+         <Grid container className = {classes.form}> 
+        
+                <Grid item sm/>
+                <Grid item sm>
+                    <Typography variant = "h4" className = {classes.title}>
+                        ลงชื่อเข้าใช้
+                    </Typography>
+                    <form noValidate onSubmit={this.handleSubmit}>
+                        <TextField 
+                            id = "email"
+                            name = "email"
+                            type = "email"
+                            label = "Email"
+                            className = {classes.textt}
+                            value = {this.state.email}
+                            onChange = {this.handleChange}
+                            helperText= {errors.email}
+                            errors={errors.email ? true : false}
+                            fullWidth
+                        /><br/>
+                        <TextField 
+                        id = "password"
+                        name = "password"
+                        type = "password"
+                        label = "Password"
+                        className = {classes.textt}
+                        value = {this.state.password}
+                        helperText= {errors.password}
+                        errors={errors.password ? true : false}
+                        onChange = {this.handleChange}
+                        fullWidth
+                        />
+                        {errors.general &&(
+                            <Typography variant = "body2" className ={classes.customError}>
+                               {errors.general}
+                            </Typography>
+                        )}
+                        <br/>
+                        <Button 
+                            type = "submit" 
+                            variant = "contained" 
+                            color="primary" 
+                            disabled = {loading}
+                            className={classes.Button}>
+                            login
+                            {loading && (
+                                <CircularProgress size = {30} className = {classes.spin}/>
+                            )}
+                        </Button>
+                        <br/>
+                        <small>ลืมรหัสผ่าน | <Link to = "/signup"> สมัครสมาชิก</Link></small>
 
-               <HeaderLogin/>
-                <div className="center k1">
-              <div > 
-                    <div className="bg-box-log-color">
-                    <Form  className="form-padding " onSubmit={this.handleSubmit} >
-                    <div className="title1">เข้าสู่ระบบ</div>
-                    <Form.Group controlId="formBasicEmail" className="form-padding-top">
-                      <Form.Label>ชื่อผู้ใช้</Form.Label>
-                      <Form.Control 
-                      required
-                      name="email"
-                      type="text" 
-                      placeholder="Enter email"
-                      value = {this.state.email}
-                      onChange={this.handlechange}
-                       /> 
-                    </Form.Group>
-                  
-                    <Form.Group controlId="formBasicPassword">
-                      <Form.Label>รหัสผ่าน</Form.Label>
-                      <Form.Control 
-                      required
-                      name="password"
-                      type="password" 
-                      placeholder="Password" 
-                      value = {this.state.password}
-                      onChange={this.handlechange}
-                      />
-                    </Form.Group>
-                    <Form.Group controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" label="จำรหัสผ่าน" />
-                    </Form.Group>
-                
-                <Button className="container-fluid bt " aria-disabled="true" type="submit"  >
-                    เข้าสู่ระบบ
-                    </Button> 
-                  </Form>
-                  </div>
-                    
-              </div>
-                </div>
-              
-                
-                <Footer/>   
-                         
-                     
-              
-            </div>
+                        
+                    </form>
+                </Grid>
+                <Grid item sm/>
+            </Grid>
       
       )
   }
 }
 
-const mapStatetoProps = state =>({
-  user : state.user,
-  UI : state.UI
-});
-const mapActiontoprops = {
-  loginUser
-}
-export default connect(mapStatetoProps,mapActiontoprops)(Login);
+
+export default withstyles(style) (Login);
 

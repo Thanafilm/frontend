@@ -28,13 +28,13 @@ import statisticsaccess from "./component/pages/statistics/statisticsaccess";
 import statisticssell from "./component/pages/statistics/statisticssell";
 import statisticsproduct from "./component/pages/statistics/statisticsproduct";
 import statisticsauction from "./component/pages/statistics/statisticsauction";
+import list from "./component/pages/list/list";
 
 import home from "./component/Home/homepage"
 
 
 //redux
-import {Provider}from 'react-redux';
-import store from './redux/store';
+
 import signup from './component/Login/registor';
 
 
@@ -73,6 +73,8 @@ class App extends Component{
         <Route path = "/stat/product" component = {statisticsproduct}/>
         <Route path = "/stat/access" component = {statisticsaccess}/>
         <Route path = "/offer/Details" component = {offerbuyDetails}/>
+        <Route path = "/li/list" component = {list}/>
+        
       </Switch>
         
     
@@ -81,13 +83,12 @@ class App extends Component{
   render(){
     
     return(
-      <Provider store = {store}>
       <div>
       <BrowserRouter>{this.renderRouter()}</BrowserRouter>
       </div>
-      </Provider>
     )
   }
+ 
 }
 
 export default App;

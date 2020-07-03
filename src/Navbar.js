@@ -3,7 +3,6 @@ import Signout from "./Signout";
 import "./styleNavbar.css";
 import { Link } from "react-router-dom";
 import Avatar from "@material-ui/core/Avatar";
-//import firebase from "./backEnd/firebase"
 import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
@@ -12,14 +11,14 @@ import Badge from '@material-ui/core/Badge';
 import MailIcon from '@material-ui/icons/Mail';
 
 
+
+
 //import axios from "axios";
 //react------ HOOK
 
 
 
 class NavbarLogin extends Component {
-
- 
 
 render(){
  
@@ -83,16 +82,16 @@ render(){
           <Link to="/calfmanage">
             <div className="dropbtn">รายงาน</div>
             <div className="dropdown-content">
-                    <Link to="/brandsetting">
+                    <Link to="/stat/sell">
                       <div>สถิติขายโคมีชีวิต</div>
                     </Link>
-                    <Link to="/usersetting">
+                    <Link to="/stat/auction">
                       <div>สถิติการประมูลโคมีชีวิต</div>
                     </Link>
-                    <Link to="/farmsetting">
+                    <Link to="/stat/product">
                       <div>สถิติการขายผลิตภัณฑ์จากโค</div>
                     </Link>
-                    <Link to="/drugsetting">
+                    <Link to="/stat/access">
                       <div>สถิติการขายสินค้าเบ็ดเตล็ด</div>
                     </Link>
                   </div>
@@ -106,6 +105,24 @@ render(){
         <div className="dropdown">
           <Link to="/instructionmanualn">
             <div className="dropbtn">คู่มือการใช้งาน</div>
+          </Link>
+        </div>
+
+        <div className="dropdown">
+          <Link to="/calfmanage">
+            <div className="dropbtn">ตั้งค่า</div>
+            <div className="dropdown-content">
+                    <Link to="/stat/sell">
+                      <div>แก้ไขข้อมูลส่วนตัว</div>
+                    </Link>
+                    <Link to="/li/list">
+                      <div>รายการรับเรื่อง</div>
+                    </Link>
+                    
+                    <Link to="/login">
+                      <div >ออกจากระบบ</div>
+                    </Link>
+                  </div>
           </Link>
         </div>
 

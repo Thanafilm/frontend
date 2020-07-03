@@ -59,7 +59,7 @@ class managesale extends React.Component{
                                  
                                                  
                                               </div>
-                                <Table className aria-label="simple table">
+                                <h3><Table className aria-label="simple table">
                                 
                                     <TableHead >
                                     
@@ -102,194 +102,12 @@ class managesale extends React.Component{
                                    
                                     </TableBody>
 
-                                    <TableBody>
-                                     
-                                        <TableRow >
-                                        
-                                        <TableCell align="center">1</TableCell>
-                                        <TableCell align="center">เนื้อโค</TableCell>
-                                        <TableCell align="center">M@A</TableCell>
-                                        <TableCell align="center">145</TableCell>
-                                        <TableCell align="center">10</TableCell>
-                                        <TableCell align="center">11/11/2019</TableCell>
-                                        <TableCell align="center">15/11/2019</TableCell>
-                                        <TableCell align="center"> -</TableCell>
-                                        
-                                        <TableCell align="center"> <Button
-                                    variant="contained"
-                                    color="primary"
-                                    size="small"
-                                style={{outline:"none"}}
-                                    startIcon={<SaveIcon />}
-                                >
-                                    จัดการสินค้า
-                                </Button></TableCell>
                                     
-                                        </TableRow>
-                                   
-                                    </TableBody>
-                                    <TableBody>
-                                     
-                                        <TableRow >
-                                        
-                                        <TableCell align="center">1</TableCell>
-                                        <TableCell align="center">เนื้อโค</TableCell>
-                                        <TableCell align="center">M@A</TableCell>
-                                        <TableCell align="center">145</TableCell>
-                                        <TableCell align="center">10</TableCell>
-                                        <TableCell align="center">11/11/2019</TableCell>
-                                        <TableCell align="center">15/11/2019</TableCell>
-                                        <TableCell align="center"> -</TableCell>
-                                        
-                                        <TableCell align="center"> <Button
-                                    variant="contained"
-                                    color="primary"
-                                    size="small"
-                                style={{outline:"none"}}
-                                    startIcon={<SaveIcon />}
-                                >
-                                    จัดการสินค้า
-                                </Button></TableCell>
-                                    
-                                        </TableRow>
-                                   
-                                    </TableBody>
-                                    <TableBody>
-                                     
-                                        <TableRow >
-                                        
-                                        <TableCell align="center">1</TableCell>
-                                        <TableCell align="center">เนื้อโค</TableCell>
-                                        <TableCell align="center">M@A</TableCell>
-                                        <TableCell align="center">145</TableCell>
-                                        <TableCell align="center">10</TableCell>
-                                        <TableCell align="center">11/11/2019</TableCell>
-                                        <TableCell align="center">15/11/2019</TableCell>
-                                        <TableCell align="center"> -</TableCell>
-                                        
-                                        <TableCell align="center"> <Button
-                                    variant="contained"
-                                    color="primary"
-                                    size="small"
-                                style={{outline:"none"}}
-                                    startIcon={<SaveIcon />}
-                                >
-                                    จัดการสินค้า
-                                </Button></TableCell>
-                                    
-                                        </TableRow>
-                                   
-                                    </TableBody>
-                                    <TableBody>
-                                     
-                                        <TableRow >
-                                        
-                                        <TableCell align="center">1</TableCell>
-                                        <TableCell align="center">เนื้อโค</TableCell>
-                                        <TableCell align="center">M@A</TableCell>
-                                        <TableCell align="center">145</TableCell>
-                                        <TableCell align="center">10</TableCell>
-                                        <TableCell align="center">11/11/2019</TableCell>
-                                        <TableCell align="center">15/11/2019</TableCell>
-                                        <TableCell align="center"> -</TableCell>
-                                        
-                                        <TableCell align="center"> <Button
-                                    variant="contained"
-                                    color="primary"
-                                    size="small"
-                                style={{outline:"none"}}
-                                    startIcon={<SaveIcon />}
-                                >
-                                    จัดการสินค้า
-                                </Button></TableCell>
-                                    
-                                        </TableRow>
-                                   
-                                    </TableBody>
-                                    <TableBody>
-                                     
-                                        <TableRow >
-                                        
-                                        <TableCell align="center">1</TableCell>
-                                        <TableCell align="center">เนื้อโค</TableCell>
-                                        <TableCell align="center">M@A</TableCell>
-                                        <TableCell align="center">145</TableCell>
-                                        <TableCell align="center">10</TableCell>
-                                        <TableCell align="center">11/11/2019</TableCell>
-                                        <TableCell align="center">15/11/2019</TableCell>
-                                        <TableCell align="center"> -</TableCell>
-                                        
-                                        <TableCell align="center"> <Button
-                                    variant="contained"
-                                    color="primary"
-                                    size="small"
-                                style={{outline:"none"}}
-                                    startIcon={<SaveIcon />}
-                                >
-                                    จัดการสินค้า
-                                </Button></TableCell>
-                                    
-                                        </TableRow>
-                                   
-                                    </TableBody>
-
-                                    <TableBody>
-                                     
-                                        <TableRow >
-                                        
-                                        <TableCell align="center">1</TableCell>
-                                        <TableCell align="center">เนื้อโค</TableCell>
-                                        <TableCell align="center">M@A</TableCell>
-                                        <TableCell align="center">145</TableCell>
-                                        <TableCell align="center">10</TableCell>
-                                        <TableCell align="center">11/11/2019</TableCell>
-                                        <TableCell align="center">15/11/2019</TableCell>
-                                        <TableCell align="center"> -</TableCell>
-                                        
-                                        <TableCell align="center"> <Button
-                                    variant="contained"
-                                    color="primary"
-                                    size="small"
-                                style={{outline:"none"}}
-                                    startIcon={<SaveIcon />}
-                                >
-                                    จัดการสินค้า
-                                </Button></TableCell>
-                                    
-                                        </TableRow>
-                                   
-                                    </TableBody>
-                                    <TableBody>
-                                     
-                                        <TableRow >
-                                        
-                                        <TableCell align="center">1</TableCell>
-                                        <TableCell align="center">เนื้อโค</TableCell>
-                                        <TableCell align="center">M@A</TableCell>
-                                        <TableCell align="center">145</TableCell>
-                                        <TableCell align="center">10</TableCell>
-                                        <TableCell align="center">11/11/2019</TableCell>
-                                        <TableCell align="center">15/11/2019</TableCell>
-                                        <TableCell align="center"> -</TableCell>
-                                        
-                                        <TableCell align="center"> <Button
-                                    variant="contained"
-                                    color="primary"
-                                    size="small"
-                                style={{outline:"none"}}
-                                    startIcon={<SaveIcon />}
-                                >
-                                    จัดการสินค้า
-                                </Button></TableCell>
-                                    
-                                        </TableRow>
-                                   
-                                    </TableBody>
-                                </Table>
+                                </Table></h3>
                                 </TableContainer></div>
                                  </table>
                                  <div className='col-12 text-right 'style={{backgroundColor:"#ffffff", marginLeft:"%",marginRight:"25%"}}>
-                            .........
+                           
                         </div>
                                  </div> </div>
                                  

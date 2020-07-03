@@ -1,11 +1,16 @@
 import React,{Component} from "react";
 import { Button } from "react-bootstrap";
-
 import Badge from '@material-ui/core/Badge';
 import Avatar from '@material-ui/core/Avatar';
 import {Link} from "react-router-dom";
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import MailIcon from '@material-ui/icons/Mail';
+import { green } from '@material-ui/core/colors';
+import IconButton from '@material-ui/core/IconButton';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+
 
 const StyledBadge = withStyles((theme) => ({
   badge: {
@@ -56,20 +61,17 @@ const useStyles = makeStyles((theme) => ({
 
 class Signout extends Component {
  
-
-
-
   render() {
     return (
 
       
 
       <div style ={{float:"right"}} >
-        <Badge badgeContent={4} color="secondary" size="Large "style={{ marginTop:"10px",marginleft:"50%"}}>
-        <MailIcon />
+        <Badge badgeContent={4} color="secondary" size="Large "style={{ marginTop:"10px",marginRight:"20px"}}>
+        <MailIcon style={{ color: green[500] }} />
       </Badge>
 
-      <StyledBadge
+      <StyledBadge style={{ marginRight:"0px"}}
         overlap="circle"
         anchorOrigin={{
           vertical: 'bottom',
@@ -78,9 +80,12 @@ class Signout extends Component {
         }}
         variant="dot"
       >
-        <Avatar  alt="Remy Sharp" src=""/>
+        <Avatar   alt="Remy Sharp" src=""/>
       </StyledBadge>
-                 <Link to ="/"><Button  variant='danger' onClick={(e)=>this.logout(e)} >ออก</Button></Link>
+
+      
+
+                 
 
             
          

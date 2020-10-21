@@ -66,7 +66,7 @@ class salecattle extends React.Component{
                                         <div className = "Row f1">
                                         <Grid container spacing = {3}>
                                             <Grid item xs = {3} >
-                                                <label >รหัสผ่าน</label>
+                                                
                                             </Grid>
                                             <Grid item xs = {8}>
                                             <TextField 
@@ -90,8 +90,15 @@ class salecattle extends React.Component{
                                                     </div> 
                                                     <div className= "form-group">
                                                         <label for="strain">สายพันธุ์โค</label><select className="form-control" id="stain">
-                                                        <option>1.ชาลา เฮดชาลา</option>
-                                                        <option>2.โนบรา</option>
+                                                        <option>บราห์มัน</option>
+                                                        <option>แองกัส</option>
+                                                        <option>ชาร์โรเล่ส์</option>
+                                                        <option>ซิมเมนทัล </option>
+                                                        <option>โคพันธุ์ตาก </option>
+                                                        <option>กำแพงแสน </option>
+                                                        <option>กบินทร์บุรี </option>
+                                                        <option>เดร้าท์มาสเตอร์</option>
+                                                        <option>ฮินดูบราซิล </option>
                                                         </select>
                                                     </div> 
                                                     <div className= "form-group">

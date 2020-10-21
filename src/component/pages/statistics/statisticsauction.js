@@ -17,8 +17,62 @@ import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import { Doughnut, Bar } from "react-chartjs-2";
+import Paper from "@material-ui/core/Paper";
+import Grid from "@material-ui/core/Grid";
+
+
 
 class detailsauction extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+          chartData: {
+            labels: [
+              "",
+              "",
+              "",
+              "",
+             
+            ],
+            datasets: [
+              {
+                label: "test01",
+                data: [12, 19, 5, 7],
+                backgroundColor: [
+                  "rgba(255, 85, 85)",
+                  "rgba(54, 162, 235)",
+                  "rgba(255, 255, 85)",
+                  "rgba(0, 255, 128)",
+              
+                ],
+              },
+            ],
+          },
+          chartData2: {
+            labels: [
+                "",
+                "",
+                "",
+                "",
+           
+            ],
+            datasets: [
+              {
+                data: [12, 19, 5, 7],
+                backgroundColor: [
+                  "rgba(255, 85, 85)",
+                  "rgba(54, 162, 235)",
+                  "rgba(255, 255, 85)",
+                  "rgba(0, 255, 128)",
+                 
+                ],
+              },
+            ],
+          },
+        };
+      }
+
     render(){
         return(
             <div>
@@ -85,8 +139,73 @@ class detailsauction extends React.Component{
 
                                         </div>
 
-                                        <div container spacing={3}  style={{backgroundColor:"#ffffff",height:"200px", marginTop:"18px",marginLeft:"15px",marginRight:"15"}} >
+                                        <div container spacing={3}  style={{backgroundColor:"#ffffff",height:"450px", marginTop:"18px",marginLeft:"15px",marginRight:"15"}} >
                                         <Button variant="contained" color="primary">ข้อมูลกราฟสถิติ</Button>
+                                        <div className="center3 container-fluid">
+                                                <Grid container spacing={1}>
+                                                
+                                                <Grid container item xs={6} spacing={3} style={{marginTop:"20px"}}>
+                                                    <Grid item xs={12}>
+                                                    <Paper elevation={1}>
+                                                        <Doughnut
+                                                        data={this.state.chartData}
+                                                        options={{
+                                                            responsive: true,
+                                                            title: {
+                                                            display: true,
+                                                            text: "รายการทั้งหมด",
+                                                            fontSize: 25,
+                                                            },
+                                                            legend: {
+                                                            display: true,
+                                                            position: "bottom",
+                                                            },
+                                                            layout: {
+                                                            padding: {
+                                                                left: 0,
+                                                                right: 0,
+                                                                top: 0,
+                                                                bottom: 0,
+                                                            },
+                                                            },
+                                                        }}
+                                                        />
+                                                    </Paper>
+                                                    </Grid>
+                                                </Grid>
+                                                
+                                                <Grid container item xs={6} spacing={3} style={{marginTop:"20px"}}>
+                                                
+                                                    <Grid item xs={12}>
+                                                    <Paper elevation={1}>
+                                                        <Bar
+                                                        data={this.state.chartData2}
+                                                        options={{
+                                                            responsive: true,
+                                                            title: {
+                                                            display: true,
+                                                            text: "รายการทั้งหมด",
+                                                            fontSize: 25,
+                                                            },
+                                                            legend: {
+                                                            display: false,
+                                                            },
+                                                            layout: {
+                                                            padding: {
+                                                                left: 0,
+                                                                right: 0,
+                                                                top: 0,
+                                                                bottom: 0,
+                                                            },
+                                                            },
+                                                        }}
+                                                        />
+                                                    </Paper>
+                                                    </Grid>
+                                                </Grid>
+                                                </Grid> 
+                                                
+                                            </div>
                                         
                                         </div>
 

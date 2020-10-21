@@ -67,9 +67,8 @@ class accessories extends React.Component{
                                                     id="demo-simple-select"
                                             
                                                     >
-                                                    <MenuItem value={10}>Ten</MenuItem>
-                                                    <MenuItem value={20}>Twenty</MenuItem>
-                                                    <MenuItem value={30}>Thirty</MenuItem>
+                                                    <MenuItem value={10}>ไม่มี</MenuItem>
+                                                    
                                                     </Select>
                                                     </FormControl> </Grid></div>
                                     <div className=""style={{ marginTop:"5px"}}><Grid item xs={20}>
@@ -117,9 +116,8 @@ class accessories extends React.Component{
                                                     id="demo-simple-select"
                                             
                                                     >
-                                                    <MenuItem value={10}>Ten</MenuItem>
-                                                    <MenuItem value={20}>Twenty</MenuItem>
-                                                    <MenuItem value={30}>Thirty</MenuItem>
+                                                    <MenuItem value={10}>ไม่มี</MenuItem>
+                                                    
                                                     </Select>
                                                     </FormControl>
                                               </Grid></div>

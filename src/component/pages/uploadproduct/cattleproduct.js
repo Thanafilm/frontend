@@ -60,8 +60,7 @@ class cattleproduct extends React.Component{
                                                         <label for="Type">*ชนิดผลิตภัณฑ์</label>
                                                         <select className="form-control" id="type">
                                                         <option>ไม่มี</option>
-                                                        <option>1.โคหย่านม</option>
-                                                        <option>2.โคแม่ลูกอ่อน</option>
+                                                      
                                                         </select>
                                                     </div> 
                                                     <div className= "form-group">
@@ -152,24 +151,21 @@ class cattleproduct extends React.Component{
                                                         <label for="Type">เนื้อสัตว์อนามัย(Q)</label>
                                                         <select className="form-control" id="type">
                                                         <option>ไม่มี</option>
-                                                        <option>1.โคหย่านม</option>
-                                                        <option>2.โคแม่ลูกอ่อน</option>
+                                                      
                                                         </select>
                                                     </div> 
                                                     <div className= "form-group">
                                                         <label for="Type">ปศุสัตว์ OK</label>
                                                         <select className="form-control" id="type">
                                                         <option>ไม่มี</option>
-                                                        <option>1.โคหย่านม</option>
-                                                        <option>2.โคแม่ลูกอ่อน</option>
+                                                        
                                                         </select>
                                                     </div> 
                                                     <div className= "form-group">
                                                         <label for="Type">อย.</label>
                                                         <select className="form-control" id="type">
                                                         <option>ไม่มี</option>
-                                                        <option>1.โคหย่านม</option>
-                                                        <option>2.โคแม่ลูกอ่อน</option>
+                                                 
                                                         </select>
                                                     </div> 
                                                     <div className= "form-group">
